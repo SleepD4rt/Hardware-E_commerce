@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&display=swap");
 
 /* Variables */
 :root {
@@ -28,5 +28,45 @@
   text-decoration: none;
   list-style: none;
   font-family: "Poppins", sans-serif;
-  /* border: 1px solid red; */
+  border: 1px solid red;
+}
+
+/* ============================ HEADER ============================*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 160px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    35deg,
+    rgba(0, 0, 0, 1) 45%,
+    rgba(247, 0, 0, 1) 100%
+  );
+}
+
+header img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 79px;
+  height: 79px;
+}
+
+.mainheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
 }
