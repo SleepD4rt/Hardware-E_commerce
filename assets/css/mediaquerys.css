@@ -8,7 +8,11 @@
     position: fixed;
     width: 100%;
   }
-  .navbar-list {
+
+  .navbar {
+    justify-content: flex-end;
+  }
+  .navbar--list {
     position: absolute;
     top: 32px;
     width: 90%;
@@ -20,6 +24,10 @@
     padding: 45px 30px;
     align-items: flex-start;
     display: none;
+  }
+
+  .navbar--list > .carrito {
+    display: flex;
   }
 
   .menu-label {
@@ -35,5 +43,11 @@
 
   #menu-toggle:checked + .navbar-list {
     display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .header--buscador {
+    display: none;
   }
 }
