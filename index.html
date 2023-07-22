@@ -9,24 +9,36 @@
   </head>
   <body>
     <header>
-      <div class="mainheader">
-        <img src="assets/img/logo.jpg" alt="" class="logo" />
-        <input type="text" placeholder="Buscar" />
-        <input type="button" value="Iniciar Sesion" />
-        <img src="assets/img/carrito.svg" alt="Ver Carrito" class="carrito" />
+      <img src="assets/img/logo.jpg" alt="Pixel" class="header--logo" />
+
+      <div class="header--buscador">
+        <img
+          src="assets/img/buscar.png"
+          alt="buscar"
+          class="buscador--buscar"
+        />
+        <input class="buscador--input" type="text" placeholder="  Buscar" />
       </div>
 
       <!-- Division header -->
-      <div class="menu">
-        <div class="navbar">
-          <nav class="navbar-list">
-            <ol>
-              <li class="nav-link">Productos</li>
-              <li class="nav-link">Contacto</li>
-              <li class="nav-link"></li>
-            </ol>
-          </nav>
-        </div>
+
+      <div class="navbar">
+        <label for="menu-toggle" class="menu-label">
+          <img src="./assets/images/menu.png" alt="menu-icon" />
+        </label>
+        <input type="checkbox" id="menu-toggle" />
+        <nav class="navbar--list">
+          <a class="navbar--list--link">Productos</a>
+          <a class="navbar--list--link">Contacto</a>
+          <input type="button" value="Iniciar Sesion" />
+          <a class="nav-link">
+            <img
+              src="assets/img/carrito.png"
+              alt="Ver Carrito"
+              class="carrito"
+            />
+          </a>
+        </nav>
       </div>
     </header>
   </body>

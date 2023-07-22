@@ -1,3 +1,39 @@
-@media (min-witdh=320px) {
+@media (max-width: 992px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+  }
+  .navbar-list {
+    position: absolute;
+    top: 32px;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    border-top: 0;
+    flex-direction: column;
+    border-radius: 0px 0px 15px 15px;
+    padding: 45px 30px;
+    align-items: flex-start;
+    display: none;
+  }
 
+  .menu-label {
+    display: flex;
+    cursor: pointer;
+    order: 2;
+  }
+
+  .menu-label img {
+    height: 32px;
+    width: 32px;
+  }
+
+  #menu-toggle:checked + .navbar-list {
+    display: flex;
+  }
 }

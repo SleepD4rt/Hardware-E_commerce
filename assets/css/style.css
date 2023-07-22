@@ -1,25 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&display=swap");
 
 /* Variables */
-:root {
-  /* bg colors */
-  --background: #02050e;
-  --primary: #1e50ff;
-  --secondary: #272d37;
-  --btn-lg: #050d26;
-  --bg-azul-10: #e9eeff;
-  --bg-white: #fff;
-  --bg-electric: #f0fbff;
-  --nav-bg: #0f1525;
-
-  /* Text colors */
-  --text-gray: #adb9c7;
-  --text-white: #f3f4f6;
-
-  /* Decoration */
-  --fire: #ff6d00;
-  --electric: #64d3ff;
-}
+/* :root {
+} */
 /* Reinicio de estilos */
 * {
   margin: 0;
@@ -27,46 +10,69 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "Poppins", sans-serif;
-  border: 1px solid red;
+  font-family: "Roboto Flex", sans-serif;
 }
-
 /* ============================ HEADER ============================*/
 
 header {
   display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 160px;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    35deg,
-    rgba(0, 0, 0, 1) 45%,
-    rgba(247, 0, 0, 1) 100%
-  );
+  height: 100px;
+  padding: 0 30px;
+  position: fixed;
+  z-index: 2;
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--buscador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.buscador--buscar {
+  height: 45%;
+  width: 45%;
+}
+
+.header--buscador > input {
+  height: 45%;
 }
 
 header img {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 79px;
-  height: 79px;
-}
-
-.mainheader {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.menu {
-  width: 100%;
+  width: 99px;
+  height: 99px;
 }
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  height: 100%;
+  width: 50%;
   color: #fff;
+}
+
+#menu-toggle,
+.menu-label {
+  display: none;
+}
+
+.navbar--list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+
+.carrito {
+  cursor: pointer;
+  width: 79px;
+  height: 79px;
+  color: white;
 }
