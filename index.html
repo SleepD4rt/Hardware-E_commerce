@@ -27,28 +27,42 @@
           <img src="./assets/img/menu.png" alt="menu-icon" />
         </label>
         <input type="checkbox" id="menu-toggle" />
-        <nav class="navbar--list">
-          <a class="navbar--list--link">Productos</a>
-          <a class="navbar--list--link">Contacto</a>
+        <ul class="navbar--list">
+          <li><a href="#products" class="navbar--list--link">Productos</a></li>
+          <li><a a href="#info" class="navbar--list--link">Servicios</a></li>
+          <li><a a href="contact" class="navbar--list--link">Contacto</a></li>
           <input type="navbar--list--button" value="Iniciar Sesion" />
-        </nav>
+        </ul>
         <img src="assets/img/carrito.png" alt="Ver Carrito" class="carrito" />
       </div>
     </header>
-
-    <div id="hero">
-      <div class="trend-product">
+    <main>
+      <div id="hero">
         <div class="trend-product">
-          <div class="trend-product--tittle"><h1>Productos destacados</h1></div>
+          <div class="trend-product--tittle">
+            <h1>Productos destacados</h1>
+          </div>
           <div class="trend-product--move-btns">
             <input type="button" value="<-" />
             <input type="button" value="->" />
           </div>
-          <div class="trend-product--image">
-            <img src="assets/img/hero/notebook.png" alt="notebooks" />
+          <div class="trend-product--buy">
+            <div class="buy--image">
+              <img src="assets/img/hero/notebook.png" alt="notebook" />
+              <div class="buy--btn">
+                <label><input type="button" value="Comprar" /></label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- CARDS -->
+      <section id="info"></section>
+    </main>
   </body>
 </html>
+
+<!-- card -->
+<!-- discover -->
+<!-- products -->
+<!-- footer -->
