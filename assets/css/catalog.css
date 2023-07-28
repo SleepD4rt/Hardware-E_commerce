@@ -1,0 +1,19 @@
+/* ============================ DISCOVERY ============================ */
+
+#catalog-products {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 3fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.discovery--product {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.discovery--product--img {
+  width: 50%;
+}
