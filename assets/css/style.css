@@ -11,7 +11,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "Roboto Flex", sans-serif;
-  border: solid crimson 1px;
+  /* border: solid crimson 1px; */
 }
 /* ============================ HEADER ============================*/
 
@@ -187,4 +187,3 @@ main {
   width: 20%;
   height: 200px;
 }
-
