@@ -187,3 +187,38 @@ main {
   width: 20%;
   height: 200px;
 }
+
+/* ============================ Contacto ============================ */
+
+#contact {
+  width: 100%;
+  height: 600px;
+  background: #1c1c1c;
+}
+
+.contact--info {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .info--iframe {
+  height: 100%;
+  padding: 10px;
+} */
+
+.info--iframe iframe {
+  height: 400px;
+  padding: 10px;
+}
+
+.info--number {
+  color: white;
+}
+
+.info--help {
+  color: white;
+}
+
+.info--social-media {
+  color: white;
+}
