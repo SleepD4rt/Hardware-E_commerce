@@ -92,6 +92,7 @@ header img {
 /* ============================ MAIN ============================*/
 
 main {
+  background: #efefef;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,6 +200,8 @@ main {
 .contact--info {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* .info--iframe {
@@ -207,8 +210,13 @@ main {
 } */
 
 .info--iframe iframe {
-  height: 400px;
-  padding: 10px;
+  width: 600px;
+  height: 500px;
+  padding: 20px;
+}
+
+.info--number {
+  color: white;
 }
 
 .info--number {
@@ -221,4 +229,21 @@ main {
 
 .info--social-media {
   color: white;
+}
+
+.social-media-facebook img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-media-instagram img {
+  width: 50px;
+  height: 50px;
+}
+
+.info--social-media--list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
