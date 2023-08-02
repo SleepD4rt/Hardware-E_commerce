@@ -24,17 +24,45 @@
       <!-- Division header -->
 
       <div class="navbar">
+        <!--  -->
         <label for="menu-toggle" class="menu-label">
           <img src="./assets/img/menu.png" alt="menu-icon" />
         </label>
         <input type="checkbox" id="menu-toggle" />
+
+        <!--  -->
         <ul class="navbar--list">
           <li><a href="#products" class="navbar--list--link">Productos</a></li>
           <li><a a href="#info" class="navbar--list--link">Servicios</a></li>
           <li><a a href="contact" class="navbar--list--link">Contacto</a></li>
           <input type="navbar--list--button" value="Iniciar Sesion" />
         </ul>
-        <img src="assets/img/carrito.png" alt="Ver Carrito" class="carrito" />
+
+        <!--  -->
+        <label for="cart-toggle" class="cart-label"
+          ><img src="assets/img/carrito.png" alt="cart-icon" class="menu-cart"
+        /></label>
+        <input type="checkbox" id="cart-toggle" />
+
+        <!-- Carrito -->
+        <div class="cart">
+          <h1>MIS COMPRAS</h1>
+          <div class="cart-item">
+            <img src="./assets/img/hero/notebook.png" alt="notebook" />
+            <!-- Info del producto -->
+            <div class="item-info">
+              <h3 class="item-title">Notebook ASUS</h3>
+              <p class="item-bid">Cantidad</p>
+              <span class="item-price">$230.000</span>
+            </div>
+            <!-- Botones -->
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -59,35 +87,37 @@
       </div>
       <!-- CARDS -->
       <section id="info">
-        <div class="info-card">
-          <h1 class="card--tittle">
-            Repación de Notebooks y equipos de escritorio
-          </h1>
-          <p class="card-descrip">Revisamos tu equipo y damos soluciones.</p>
-        </div>
-        <!--  -->
-        <div class="info-card">
-          <h1 class="card--tittle">Venta de insumos</h1>
-          <p class="card-descrip">
-            Vendemos insumos tanto para impresoras como otros accesorios y
-            perifericos.
-          </p>
-        </div>
-        <!--  -->
-        <div class="info-card">
-          <h1 class="card--tittle">Venta de componentes de PC</h1>
-          <p class="card-descrip">
-            Ofrecemos los últimos componentes para poder armar o mejorar tu PC o
-            notebook.
-          </p>
-        </div>
-        <!--  -->
-        <div class="info-card">
-          <h1 class="card--tittle">Reparación de impresoras</h1>
-          <p class="card-descrip">
-            Realizamos limpieza de cabezales, limpieza interna, recarga de
-            cartuchos.
-          </p>
+        <div class="info-cards-container">
+          <div class="info-card">
+            <h1 class="card--tittle">
+              Repación de Notebooks y equipos de escritorio
+            </h1>
+            <p class="card-descrip">Revisamos tu equipo y damos soluciones.</p>
+          </div>
+          <!--  -->
+          <div class="info-card">
+            <h1 class="card--tittle">Venta de insumos</h1>
+            <p class="card-descrip">
+              Vendemos insumos tanto para impresoras como otros accesorios y
+              perifericos.
+            </p>
+          </div>
+          <!--  -->
+          <div class="info-card">
+            <h1 class="card--tittle">Venta de componentes de PC</h1>
+            <p class="card-descrip">
+              Ofrecemos los últimos componentes para poder armar o mejorar tu PC
+              o notebook.
+            </p>
+          </div>
+          <!--  -->
+          <div class="info-card">
+            <h1 class="card--tittle">Reparación de impresoras</h1>
+            <p class="card-descrip">
+              Realizamos limpieza de cabezales, limpieza interna, recarga de
+              cartuchos.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -108,162 +138,164 @@
           <div class="item--catalog"><p class="item--name">Impresoras</p></div>
           <div class="item--catalog"><p class="item--name">Notebooks</p></div>
         </div>
-        <div class="product">
-          <!--  -->
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+        <div class="catalog-product-container">
+          <div class="product">
+            <!--  -->
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
-          </div>
-          <div class="discovery--product">
-            <img
-              src="assets/img/hero/notebook.png"
-              alt=""
-              class="discovery--product--img"
-            />
+            <div class="discovery--product">
+              <img
+                src="assets/img/hero/notebook.png"
+                alt=""
+                class="discovery--product--img"
+              />
 
-            <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
-            <div class="discovery--product--buy">
-              <button class="buy--btn">Comprar</button>
-              <p class="buy--price">$230.000</p>
+              <h3 class="discovery--product--name">ASUS VIVOBOOK</h3>
+              <div class="discovery--product--buy">
+                <button class="buy--btn">Comprar</button>
+                <p class="buy--price">$230.000</p>
+              </div>
             </div>
           </div>
         </div>

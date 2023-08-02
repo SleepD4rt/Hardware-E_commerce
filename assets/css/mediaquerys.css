@@ -32,6 +32,7 @@
 
   .menu-label {
     display: flex;
+    background: black;
     cursor: pointer;
     order: 2;
   }
@@ -44,6 +45,12 @@
   #menu-toggle:checked + .navbar-list {
     display: flex;
   }
+}
+
+
+.contact--info {
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media (max-width: 576px) {

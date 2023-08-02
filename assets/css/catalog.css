@@ -2,7 +2,7 @@
 
 #catalog-products {
   width: 95%;
-  height: 1000px;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: repeat(3, 1fr);
@@ -11,14 +11,23 @@
   gap: 10px;
 }
 
+.catalog-product-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .product {
   background: #efefef;
   display: grid;
   width: 100%;
   height: 950px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
+  flex-wrap: wrap;
   padding: 10px;
 }
 

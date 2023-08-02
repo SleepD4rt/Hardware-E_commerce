@@ -11,7 +11,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "Roboto Flex", sans-serif;
-  /* border: solid crimson 1px; */
+  border: solid crimson 1px;
 }
 /* ============================ HEADER ============================*/
 
@@ -65,6 +65,11 @@ header img {
   display: none;
 }
 
+#menu-toggle:checked + .navbar-list {
+  transform: translateX(0);
+  display: flex;
+}
+
 .navbar--list {
   display: flex;
   width: 100%;
@@ -81,12 +86,75 @@ header img {
   width: 100%;
 }
 
-.carrito {
+.menu-cart {
   cursor: pointer;
   width: 79px;
   height: 79px;
   color: white;
   margin-left: 30px;
+}
+
+.cart {
+  position: absolute;
+  right: 0;
+  background: #1c1c1c;
+  top: 100px;
+  padding: 50px 60px;
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+  transform: translate(200%);
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+#cart-toggle:checked + .cart {
+  /* display: flex; */
+  transform: translate(0);
+}
+
+.cart-item img {
+  width: 40%;
+  height: 40%;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #efefef;
+  width: 100%;
+  padding: 5px;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.item-info {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.down,
+.up {
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
 }
 
 /* ============================ MAIN ============================*/
@@ -151,8 +219,14 @@ main {
 
 .buy--image {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.buy--image img {
   height: 100%;
   width: 100%;
 }
@@ -180,6 +254,13 @@ main {
   gap: 10px;
 }
 
+.info-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .info-card {
   display: flex;
   flex-direction: column;
@@ -198,6 +279,7 @@ main {
 }
 
 .contact--info {
+  background: #1c1c1c;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
