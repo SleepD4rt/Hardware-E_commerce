@@ -62,6 +62,10 @@
   .header--buscador {
     display: none;
   }
+
+  .catalog-product-container {
+    display: block;
+  }
 }
 
 /* @media (max-width: 576px) {
