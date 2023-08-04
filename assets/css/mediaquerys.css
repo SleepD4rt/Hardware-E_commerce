@@ -52,6 +52,18 @@
   }
 }
 
+@media (max-width: 847px) {
+  .info-cards-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 452px) {
+  .header--buscador {
+    display: none;
+  }
+}
+
 /* @media (max-width: 576px) {
   .header--buscador {
     display: none;
