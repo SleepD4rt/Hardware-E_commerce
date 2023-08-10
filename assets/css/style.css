@@ -11,7 +11,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "Roboto Flex", sans-serif;
-  border: solid crimson 1px;
+  /* border: solid crimson 1px; */
 }
 /* ============================ HEADER ============================*/
 
@@ -92,6 +92,20 @@ header img {
   width: 90%;
 }
 
+.login--button {
+  width: 50%;
+  background-color: #efefef;
+  color: black;
+  font-weight: 800;
+  padding: 5px;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  cursor: pointer;
+}
+
 .cart-label {
   display: flex;
   justify-content: flex-end;
@@ -113,6 +127,7 @@ header img {
 
 .cart {
   position: absolute;
+  display: flex;
   flex-direction: column;
   right: 0;
   background: #1c1c1c;
@@ -128,6 +143,11 @@ header img {
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #cart-toggle:checked + .cart {
@@ -164,16 +184,35 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 10px;
 }
 
 .down,
 .up {
-  border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  -moz-border-radius: 0.2rem;
-  -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
+  padding: 5px;
+  border-radius: 0.1rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -ms-border-radius: 0.1rem;
+  -o-border-radius: 0.1rem;
+  border: 1px solid #efefef;
+}
+
+.cart--buy-section {
+  border-top: 3px solid crimson;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.divider {
+  margin-top: 50px;
+  border: 0.5px solid var(--electric);
 }
 
 /* ============================ MAIN ============================*/
