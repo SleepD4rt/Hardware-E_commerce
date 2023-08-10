@@ -21,10 +21,10 @@ header {
   height: 100px;
   padding: 0 50px;
   position: fixed;
-  z-index: 2;
   background: black;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .header--buscador {
@@ -32,6 +32,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 400px;
 }
 
 .buscador--buscar {
@@ -39,8 +40,14 @@ header {
   width: 45%;
 }
 
-.header--buscador > input {
-  height: 45%;
+.buscador--buscar {
+  width: auto;
+  height: 35px;
+}
+
+.buscador--input {
+  width: 100%;
+  height: 25px;
 }
 
 header img {
@@ -57,13 +64,9 @@ header img {
   height: 100%;
   color: #fff;
 }
-
+#cart-toggle,
 #menu-toggle,
 .menu-label {
-  display: none;
-}
-
-#cart-toggle {
   display: none;
 }
 
@@ -237,7 +240,7 @@ main {
 
 .trend-product--buy {
   display: flex;
-  width: 50%;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -252,7 +255,7 @@ main {
 }
 
 .buy--image img {
-  width: 40%;
+  width: 600px;
 }
 
 .buy--btn {
