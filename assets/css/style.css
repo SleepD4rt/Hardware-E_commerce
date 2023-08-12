@@ -64,6 +64,7 @@ header img {
   height: 100%;
   color: #fff;
 }
+
 #cart-toggle,
 #menu-toggle,
 .menu-label {
@@ -93,7 +94,7 @@ header img {
 }
 
 .login--button {
-  width: 50%;
+  width: 100%;
   background-color: #efefef;
   color: black;
   font-weight: 800;

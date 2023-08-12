@@ -7,3 +7,38 @@
   justify-content: center;
   color: white;
 }
+
+.redirect:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.redirect:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.redirect:hover {
+  padding: 5px;
+  background-color: black;
+  border: 0.5px solid white;
+  border-radius: 0.2rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+
+.redirect:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
