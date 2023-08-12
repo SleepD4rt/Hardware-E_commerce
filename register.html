@@ -21,6 +21,7 @@
       sizes="16x16"
       href="./assets/img/favicon/favicon-16x16.png"
     />
+    <link rel="stylesheet" href="assets/css/login.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/mediaquerys.css" />
     <title>Pixel - Hogar y computación</title>
@@ -62,7 +63,53 @@
         </ul>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section id="login">
+        <div class="container">
+          <div class="formulario">
+            <form>
+              <section class="data-user">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" />
+                <br />
+                <br />
+                <label for="coname"> Apellido:</label>
+                <input type="text" id="coname" />
+                <br />
+                <br />
+                <label for="coname"> Nombre de Usuario:</label>
+                <input type="text" id="username" />
+              </section>
+
+              <section class="data-mail">
+                <br />
+                <label for="">Correo: </label><input type="text" id="mail" />
+                <br />
+                <br />
+              </section>
+
+              <section class="data-legal">
+                <input type="checkbox" id="data-legal" /><label
+                  for="data-legal"
+                >
+                  Deseo recibir promociones y ofertas.</label
+                ><br />
+                <br />
+                <input type="checkbox" id="data-legal" />
+                <label for="data-legal">
+                  Acepto los terminos y condiciones.</label
+                >
+                <br />
+                <br />
+                <input type="submit" value="Crear Cuenta" />
+
+                <a href="login.html">¿Ya tenes cuenta?, ingresá.</a>
+              </section>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <section id="contact">
