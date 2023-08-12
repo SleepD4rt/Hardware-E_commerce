@@ -1,0 +1,24 @@
+#hero {
+  display: flex;
+  background: rgb(155, 160, 91);
+  background: linear-gradient(
+    35deg,
+    rgba(155, 160, 91, 1) 20%,
+    rgba(187, 190, 46, 1) 37%,
+    rgba(243, 247, 0, 1) 58%,
+    rgba(123, 125, 38, 1) 76%
+  );
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.trend-product {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

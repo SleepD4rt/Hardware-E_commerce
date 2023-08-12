@@ -23,22 +23,13 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/mediaquerys.css" />
-    <link rel="stylesheet" href="assets/css/catalog.css" />
     <title>Pixel - Hogar y computación</title>
   </head>
   <body>
     <header>
-      <img src="assets/img/logo.jpg" alt="Pixel" class="header--logo" />
-
-      <div class="header--buscador">
-        <img
-          src="assets/img/buscar.png"
-          alt="buscar"
-          class="buscador--buscar"
-        />
-        <input class="buscador--input" type="text" placeholder="  Buscar" />
-      </div>
-
+      <a href="index.html"
+        ><img src="assets/img/logo.jpg" alt="Pixel" class="header--logo"
+      /></a>
       <!-- Division header -->
 
       <div class="navbar">
@@ -51,67 +42,61 @@
         <!--  -->
         <ul class="navbar--list">
           <li>
-            <a href="#catalog-products" class="navbar--list--link">Productos</a>
+            <a href="index.html#catalog-products" class="navbar--list--link"
+              >Productos</a
+            >
           </li>
-          <li><a a href="#info" class="navbar--list--link">Servicios</a></li>
-          <li><a a href="#contact" class="navbar--list--link">Contacto</a></li>
-          <button class="login--button" type="button">Iniciar Sesión</button>
+          <li>
+            <a a href="index.html#info" class="navbar--list--link">Servicios</a>
+          </li>
+          <li>
+            <a a href="index.html#contact" class="navbar--list--link"
+              >Contacto</a
+            >
+          </li>
+          <a href="login.html"
+            ><button class="login--button" type="button">
+              Iniciar Sesión
+            </button></a
+          >
         </ul>
-
-        <!--  -->
-        <label for="cart-toggle" class="cart-label"
-          ><img src="assets/img/carrito.png" alt="cart-icon" class="menu-cart"
-        /></label>
-        <input type="checkbox" id="cart-toggle" />
-
-        <!-- Carrito -->
-        <div class="cart">
-          <h1>MIS COMPRAS</h1>
-          <div class="cart-item">
-            <img src="./assets/img/hero/notebook.png" alt="notebook" />
-            <!-- Info del producto -->
-            <div class="item-info">
-              <h3 class="item-title">Notebook ASUS</h3>
-              <p class="item-bid">Cantidad</p>
-              <span class="item-price">$230.000</span>
-            </div>
-            <!-- Botones -->
-            <div class="item-handler">
-              <span class="quantity-handler down">-</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler up">+</span>
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="cart-item">
-            <img src="./assets/img/hero/notebook.png" alt="notebook" />
-            <!-- Info del producto -->
-            <div class="item-info">
-              <h3 class="item-title">Notebook ASUS</h3>
-              <p class="item-bid">Cantidad</p>
-              <span class="item-price">$230.000</span>
-            </div>
-            <!-- Botones -->
-            <div class="item-handler">
-              <span class="quantity-handler down">-</span>
-              <span class="item-quantity">2</span>
-              <span class="quantity-handler up">+</span>
-            </div>
-          </div>
-          <!--  -->
-          <span class="divider"></span>
-          <div class="cart--buy-section">
-            <div class="cart-total">
-              <span>ARS$690.000</span>
-            </div>
-            <button class="buy--btn">Pagar</button>
-            <!-- Divisor -->
-          </div>
-        </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section id="hero">
+        <div class="trend-product">
+          <main>
+            <div class="container">
+              <div class="login--form">
+                <form>
+                  <section class="data-user">
+                    <label for="mail">Correo: </label
+                    ><input type="text" id="mail" />
+                    <br />
+                    <br />
+                    <label for="password"> contraseña:</label>
+                    <input type="text" id="password" />
+                    <br />
+                    <br />
+                  </section>
+
+                  <section class="data-">
+                    <input type="checkbox" id="data-legal" /><label
+                      for="data-legal"
+                      >Recuerdame en este dispositivo.</label
+                    ><br />
+                    <br />
+                    <input type="submit" value="Iniciar Sesión" />
+
+                    <a href="register.html">¿No tienes cuenta?, Registrate.</a>
+                  </section>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <section id="contact">
