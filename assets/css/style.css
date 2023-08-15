@@ -24,7 +24,7 @@ header {
   background: black;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header--buscador {
@@ -225,6 +225,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* margin-top: 100px; */
   padding-top: 100px;
   gap: 30px;
 }
@@ -313,13 +314,14 @@ main {
   justify-content: center;
   align-items: center;
   width: 80%;
-  background: rgb(91, 91, 91);
+  /* background: rgb(91, 91, 91);
   background: linear-gradient(
     336deg,
     rgba(91, 91, 91, 1) 24%,
     rgba(180, 180, 178, 1) 90%
-  );
+  ); */
   gap: 10px;
+  padding-top: 110px;
 }
 
 .info-cards-container {
@@ -335,7 +337,15 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgb(91, 91, 91);
+  background: linear-gradient(
+    336deg,
+    rgba(91, 91, 91, 1) 24%,
+    rgba(180, 180, 178, 1) 90%
+  );
+  border: solid #1c1c1c 3px;
   width: 100%;
+  text-align: center;
 }
 
 /* ============================ Contacto ============================ */
@@ -353,11 +363,6 @@ main {
   justify-content: space-evenly;
   align-items: center;
 }
-
-/* .info--iframe {
-  height: 100%;
-  padding: 10px;
-} */
 
 .info--iframe iframe {
   width: 100%;

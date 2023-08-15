@@ -1,17 +1,47 @@
 /* ============================ DISCOVERY ============================ */
 
 #catalog-products {
+  /* margin-top: 100px; */
   width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr 1fr);
   align-items: center;
   justify-items: center;
   gap: 10px;
+  padding-top: 110px;
+}
+
+.products--tittle h1 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .catalog-product-container {
   width: 100%;
   display: flex;
+}
+
+.catalog {
+  border: solid gray 2px;
+}
+
+.item--catalog {
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.item--catalog:hover {
+  background-color: black;
+  border: 0.5px solid white;
+  border-radius: 0.2rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
 }
 
 /* .catalog {
