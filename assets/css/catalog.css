@@ -16,12 +16,12 @@
   font-weight: 700;
 }
 
-.catalog-product-container {
+.categories {
   width: 100%;
   display: flex;
 }
 
-.catalog {
+.category {
   border: solid gray 2px;
 }
 
@@ -31,7 +31,7 @@
   padding: 2px;
 }
 
-.item--catalog:hover {
+.category:hover {
   background-color: black;
   border: 0.5px solid white;
   border-radius: 0.2rem;
@@ -48,7 +48,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 } */
 
-.product {
+.products-container {
   background: #efefef;
   display: grid;
   width: 100%;
