@@ -51,7 +51,7 @@ const createProductTemplate = (product) => {
               data-img='${cardImg}'>Agregar al carrito</button>
       <p class="buy--price">${bid}</p>
     </div>
-  </div>;
+  </div>
   `;
 };
 
@@ -83,13 +83,13 @@ const showMoreProducts = () => {
 };
 
 // Funcion para ocultar el boton ver mas si hay una categoria seleccionada
-const setShowMoreVisibility = () => {
-  if (!appState.activeFilter) {
-    showMoreBtn.classList.remove("hidden");
-  }
+// const setShowMoreVisibility = () => {
+//   if (!appState.activeFilter) {
+//     showMoreBtn.classList.remove("hidden");
+//   }
 
-  showMoreBtn.classList.add("hidden");
-};
+//   showMoreBtn.classList.add("hidden");
+// };
 
 /* --------- Logica filtros ---------- */
 // Funcion para cambiar el estado de los botones de las categorias
@@ -110,7 +110,7 @@ const changeBtnActiveState = (selectedCategory) => {
 const changeFiltersState = (btn) => {
   appState.activeFilter = btn.dataset.category;
   changeBtnActiveState(appState.activeFilter);
-  setShowMoreVisibility(appState.activeFilter);
+  //   setShowMoreVisibility(appState.activeFilter);
 };
 
 // Funcion para filtrar los productos
@@ -190,14 +190,14 @@ const closeOnScroll = () => {
 /* --------- Logica carrito  ---------- */
 /* --------- --------------- ---------- */
 // Render carrito
-const renderCart = () => {
-  if (!cart.length) {
-    productsCart.innerHTML = `<p class="empty-msg">Agrega un producto raton</p>`;
-    return;
-  }
+// const renderCart = () => {
+//   if (!cart.length) {
+//     productsCart.innerHTML = `<p class="empty-msg">Agrega un producto raton</p>`;
+//     return;
+//   }
 
-  alert("tuki");
-};
+//   alert("tuki");
+// };
 
 const addProduct = (e) => {
   if (!e.target.classList.contains("btn-add")) return;
@@ -236,16 +236,16 @@ const createCartProduct = (product) => {
 // Funcion init
 const init = () => {
   renderProducts(appState.products[0]);
-  showMoreBtn.addEventListener("click", showMoreProducts);
+  //   showMoreBtn.addEventListener("click", showMoreProducts);
   categoriesContainer.addEventListener("click", applyFilter);
 
-  cartBtn.addEventListener("click", toggleCart);
-  menuBtn.addEventListener("click", toggleMenu);
-  overlay.addEventListener("click", closeOnOverlayClick);
-  window.addEventListener("scroll", closeOnScroll);
+  //   cartBtn.addEventListener("click", toggleCart);
+  //   menuBtn.addEventListener("click", toggleMenu);
+  //   overlay.addEventListener("click", closeOnOverlayClick);
+  //   window.addEventListener("scroll", closeOnScroll);
 
   productsContainer.addEventListener("click", addProduct);
-  document.addEventListener("DOMContentLoaded", renderCart);
+  //   document.addEventListener("DOMContentLoaded", renderCart);
 };
 
 init();

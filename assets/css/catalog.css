@@ -72,8 +72,8 @@
   -o-border-radius: 0.2rem;
 }
 
-.discovery--product--img {
-  height: 50%;
+.discovery--product img {
+  height: 100px;
   display: flex;
   justify-content: center;
 }
