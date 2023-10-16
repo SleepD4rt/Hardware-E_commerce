@@ -71,20 +71,6 @@ header img {
   display: none;
 }
 
-.open-menu {
-  transform: translate(200%);
-  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -webkit-transform: translate(200%);
-  -moz-transform: translate(200%);
-  -ms-transform: translate(200%);
-  -o-transform: translate(200%);
-  -webkit-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -moz-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -ms-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-}
-
-
 .navbar--list {
   display: flex;
   width: 90%;

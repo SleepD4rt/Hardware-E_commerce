@@ -16,7 +16,7 @@
   .navbar--list {
     position: absolute;
     background: black;
-    display: flex;
+    display: none;
     flex-direction: row;
     top: 100px;
     width: 90%;
@@ -27,7 +27,7 @@
     flex-direction: column;
     border-radius: 0px 0px 15px 15px;
     padding: 45px 30px;
-    z-index: 3;
+    z-index: 2;
   }
 
   .menu-label {
@@ -42,9 +42,9 @@
     width: 32px;
   }
 
-  /* .open-menu {
+  .open-menu {
     display: flex;
-  } */
+  }
 
   .contact--info {
     flex-direction: column;

@@ -12,7 +12,7 @@ const menuBtn = document.querySelector(".menu-label");
 // Carrito div
 const cartMenu = document.querySelector(".cart");
 // Menu (Hamburguesa)
-const barsMenu = document.querySelector(".navbar");
+const barsMenu = document.querySelector(".navbar--list");
 // Overlay
 const overlay = document.querySelector(".overlay");
 // Cart bubble
@@ -226,7 +226,6 @@ const createCartProduct = (product) => {
 const init = () => {
   renderProducts(appState.products[0]);
   categoriesContainer.addEventListener("click", applyFilter);
-
   cartBtn.addEventListener("click", toggleCart);
   menuBtn.addEventListener("click", toggleMenu);
   overlay.addEventListener("click", closeOnOverlayClick);
