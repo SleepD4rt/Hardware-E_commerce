@@ -233,7 +233,7 @@ const init = () => {
   window.addEventListener("scroll", closeOnScroll);
 
   productsContainer.addEventListener("click", addProduct);
-  document.addEventListener("DOMContentLoaded", renderCart);
+  // document.addEventListener("DOMContentLoaded", renderCart);
 };
 
 init();

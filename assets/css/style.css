@@ -72,22 +72,18 @@ header img {
 }
 
 .open-menu {
-  transform: translate((100%));
+  transform: translate(200%);
   transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -webkit-transform: translate((100%));
-  -moz-transform: translate((100%));
-  -ms-transform: translate((100%));
-  -o-transform: translate((100%));
+  -webkit-transform: translate(200%);
+  -moz-transform: translate(200%);
+  -ms-transform: translate(200%);
+  -o-transform: translate(200%);
   -webkit-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -moz-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -ms-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
-#menu-toggle:checked + .navbar-list {
-  transform: translateX(0);
-  display: flex;
-}
 
 .navbar--list {
   display: flex;
@@ -122,31 +118,6 @@ header img {
 
 /* ============================ CARRITO DE COMPRAS ============================*/
 
-.open-cart {
-  transform: translate((200%));
-  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -webkit-transform: translate((200%));
-  -moz-transform: translate((200%));
-  -ms-transform: translate((200%));
-  -o-transform: translate((200%));
-  -webkit-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -moz-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -ms-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-}
-
-.cart::-webkit-scrollbar {
-  display: none;
-}
-
-.menu-cart {
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  color: white;
-  margin-left: 30px;
-}
-
 .cart {
   top: 65px;
   position: absolute;
@@ -159,20 +130,28 @@ header img {
   padding: 50px 60px;
   height: calc(100vh - 100px);
   overflow-y: scroll;
-  transform: translate(0%);
-  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   z-index: 2;
   gap: 30px;
   overflow-y: scroll;
-  min-width: 375px;
+  min-width: 400px;
+  transform: translate(200%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  -webkit-transform: translate(200%);
+  -moz-transform: translate(200%);
+  -ms-transform: translate(200%);
+  -o-transform: translate(200%);
   -webkit-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -moz-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -ms-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  -webkit-transform: translate(0%);
-  -moz-transform: translate(0%);
-  -ms-transform: translate(0%);
-  -o-transform: translate(0%);
+}
+
+.menu-cart {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  color: white;
+  margin-left: 30px;
 }
 
 .cart--bubble {
@@ -256,6 +235,19 @@ header img {
 .divider {
   margin-top: 50px;
   border: 0.5px solid var(--electric);
+}
+
+.open-cart {
+  transform: translate(0%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  -webkit-transform: translate(0%);
+  -moz-transform: translate(0%);
+  -ms-transform: translate(0%);
+  -o-transform: translate(0%);
+  -webkit-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  -moz-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  -ms-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
 /* ============================ MAIN ============================*/
