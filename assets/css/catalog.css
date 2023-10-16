@@ -3,12 +3,13 @@
 #catalog-products {
   /* margin-top: 100px; */
   width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, 1fr, 1fr); */
   align-items: center;
   justify-items: center;
+  flex-direction: column;
   gap: 10px;
-  padding-top: 110px;
+  /* padding-top: 110px; */
 }
 
 .products--tittle h1 {
@@ -17,16 +18,22 @@
 }
 
 .categories {
-  width: 100%;
+  flex-wrap: wrap;
   display: flex;
+  width: auto;
+  display: flex;
+  font-size: 17px;
+  gap: 10px;
 }
 
 .category {
+  display: flex;
+  padding: 3px;
+  text-align: center;
   border: solid gray 2px;
 }
 
 .item--catalog {
-  text-align: center;
   cursor: pointer;
   padding: 2px;
 }
@@ -52,7 +59,7 @@
   background: #efefef;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
   gap: 10px;
 
   padding: 10px;
@@ -89,10 +96,12 @@
   width: 100%;
   display: flex;
   align-items: flex-end;
+  padding: 10px;
 }
 
 .buy--btn {
-  width: 50%;
+  width: auto;
+  height: 60px;
   background-color: black;
   color: white;
   padding: 5px;
@@ -104,13 +113,21 @@
   cursor: pointer;
 }
 
+.buy--btn-img {
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+}
+
 .buy--price {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
-  font-size: 22px;
+  bottom: 12px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 @media (max-width: 452px) {
@@ -118,3 +135,5 @@
     display: block;
   }
 }
+
+/* 362 @media reordenar boton */

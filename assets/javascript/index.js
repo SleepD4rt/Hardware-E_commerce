@@ -48,8 +48,8 @@ const createProductTemplate = (product) => {
       <button class="buy--btn" data-id='${id}'
                data-name='${name}'
               data-bid='${bid}'
-              data-img='${cardImg}'>Agregar al carrito</button>
-      <p class="buy--price">${bid}</p>
+              data-img='${cardImg}'><img class="buy--btn-img" src="assets/img/products/add-cart.svg" alt="Agregar al carrito"/></button>
+      <p class="buy--price">${toARG_Peso(bid)}</p>
     </div>
   </div>
   `;
