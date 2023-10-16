@@ -135,6 +135,8 @@ const appState = {
 // Impresoras
 // Notebooks
 
+// Funcion para convertir el valor del producto
+//a su denominacion monetaria en Pesos Argentinos.
 const toARG_Peso = (bid) => {
   return bid.toLocaleString("es-ar", {
     style: "currency",

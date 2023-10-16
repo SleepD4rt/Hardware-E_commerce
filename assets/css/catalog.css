@@ -2,7 +2,7 @@
 
 #catalog-products {
   /* margin-top: 100px; */
-  width: 95%;
+  width: 80%;
   display: flex;
   /* grid-template-columns: repeat(auto-fit, 1fr, 1fr); */
   align-items: center;
@@ -18,8 +18,11 @@
 }
 
 .categories {
+  width: 100%;
   flex-wrap: wrap;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   display: flex;
   font-size: 17px;
@@ -50,10 +53,6 @@
   -ms-border-radius: 0.2rem;
   -o-border-radius: 0.2rem;
 }
-
-/* .catalog {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-} */
 
 .products-container {
   background: #efefef;

@@ -1,7 +1,6 @@
 // Contenedor de productos
 const productsContainer = document.querySelector(".products-container");
-// Boton ver mas
-const showMoreBtn = document.querySelector(".btn-load");
+
 // Contenedor Categorias
 const categoriesContainer = document.querySelector(".categories");
 // El HTML Collection de todas las categorias
@@ -13,7 +12,7 @@ const menuBtn = document.querySelector(".menu-label");
 // Carrito div
 const cartMenu = document.querySelector(".cart");
 // Menu (Hamburguesa)
-const barsMenu = document.querySelector(".navbar-list");
+const barsMenu = document.querySelector(".navbar");
 // Overlay
 const overlay = document.querySelector(".overlay");
 // Cart bubble
@@ -82,15 +81,6 @@ const showMoreProducts = () => {
   }
 };
 
-// Funcion para ocultar el boton ver mas si hay una categoria seleccionada
-// const setShowMoreVisibility = () => {
-//   if (!appState.activeFilter) {
-//     showMoreBtn.classList.remove("hidden");
-//   }
-
-//   showMoreBtn.classList.add("hidden");
-// };
-
 /* --------- Logica filtros ---------- */
 // Funcion para cambiar el estado de los botones de las categorias
 const changeBtnActiveState = (selectedCategory) => {
@@ -146,7 +136,6 @@ const isInactiveFilterBtn = (element) => {
 /* --------- Logica Menu/Carrito Modal ---------- */
 const toggleCart = () => {
   cartMenu.classList.toggle("open-cart");
-
   if (barsMenu.classList.contains("open-menu")) {
     barsMenu.classList.remove("open-menu");
     return;
@@ -190,14 +179,14 @@ const closeOnScroll = () => {
 /* --------- Logica carrito  ---------- */
 /* --------- --------------- ---------- */
 // Render carrito
-// const renderCart = () => {
-//   if (!cart.length) {
-//     productsCart.innerHTML = `<p class="empty-msg">Agrega un producto raton</p>`;
-//     return;
-//   }
+const renderCart = () => {
+  if (!cart.length) {
+    productsCart.innerHTML = `<p class="empty-msg">Agrega un producto raton</p>`;
+    return;
+  }
 
-//   alert("tuki");
-// };
+  alert("tuki");
+};
 
 const addProduct = (e) => {
   if (!e.target.classList.contains("btn-add")) return;
@@ -236,16 +225,15 @@ const createCartProduct = (product) => {
 // Funcion init
 const init = () => {
   renderProducts(appState.products[0]);
-  //   showMoreBtn.addEventListener("click", showMoreProducts);
   categoriesContainer.addEventListener("click", applyFilter);
 
-  //   cartBtn.addEventListener("click", toggleCart);
-  //   menuBtn.addEventListener("click", toggleMenu);
-  //   overlay.addEventListener("click", closeOnOverlayClick);
-  //   window.addEventListener("scroll", closeOnScroll);
+  cartBtn.addEventListener("click", toggleCart);
+  menuBtn.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", closeOnOverlayClick);
+  window.addEventListener("scroll", closeOnScroll);
 
   productsContainer.addEventListener("click", addProduct);
-  //   document.addEventListener("DOMContentLoaded", renderCart);
+  document.addEventListener("DOMContentLoaded", renderCart);
 };
 
 init();

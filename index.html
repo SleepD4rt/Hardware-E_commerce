@@ -23,6 +23,7 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/catalog.css" />
+    <link rel="stylesheet" href="assets/css/animaciones.css" />
     <link rel="stylesheet" href="assets/css/mediaquerys.css" />
 
     <title>Pixel - Hogar y computación</title>
@@ -44,12 +45,11 @@
 
       <!-- Division header -->
 
-      <div class="navbar">
+      <nav class="navbar">
         <!--  -->
-        <label for="menu-toggle" class="menu-label">
+        <div class="menu-label">
           <img src="./assets/img/menu.png" alt="menu-icon" />
-        </label>
-        <input type="checkbox" id="menu-toggle" />
+        </div>
 
         <!--  -->
         <ul class="navbar--list">
@@ -74,57 +74,44 @@
         </ul>
 
         <!--  -->
-        <label for="cart-toggle" class="cart-label"
-          ><img src="assets/img/carrito.png" alt="cart-icon" class="menu-cart"
-        /></label>
-        <input type="checkbox" id="cart-toggle" />
+        <div class="cart-label">
+          <img src="assets/img/carrito.png" alt="cart-icon" />
+          <div class="cart--bubble">0</div>
+        </div>
 
         <!-- Carrito -->
         <div class="cart">
           <h1>MIS COMPRAS</h1>
-          <div class="cart-item">
-            <img src="./assets/img/hero/notebook.png" alt="notebook" />
-            <!-- Info del producto -->
-            <div class="item-info">
-              <h3 class="item-title">Notebook ASUS</h3>
-              <p class="item-bid">Cantidad</p>
-              <span class="item-price">$230.000</span>
+          <div class="cart-container">
+            <div class="cart-item">
+              <img src="./assets/img/hero/notebook.png" alt="notebook" />
+              <!-- Info del producto -->
+              <div class="item-info">
+                <h3 class="item-title">Notebook ASUS</h3>
+                <p class="item-bid">Cantidad</p>
+                <span class="item-price">$230.000</span>
+              </div>
+              <!-- Botones -->
+              <div class="item-handler">
+                <span class="quantity-handler down">-</span>
+                <span class="item-quantity">1</span>
+                <span class="quantity-handler up">+</span>
+              </div>
             </div>
-            <!-- Botones -->
-            <div class="item-handler">
-              <span class="quantity-handler down">-</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler up">+</span>
-            </div>
-          </div>
 
-          <!--  -->
-          <div class="cart-item">
-            <img src="./assets/img/hero/notebook.png" alt="notebook" />
-            <!-- Info del producto -->
-            <div class="item-info">
-              <h3 class="item-title">Notebook ASUS</h3>
-              <p class="item-bid">Cantidad</p>
-              <span class="item-price">$230.000</span>
+            <!--  -->
+            <span class="divider"></span>
+            <div class="cart--buy-section">
+              <div class="cart-total">
+                <span>ARS$690.000</span>
+              </div>
+              <button class="buy--btn">Pagar</button>
+              <!-- Divisor -->
             </div>
-            <!-- Botones -->
-            <div class="item-handler">
-              <span class="quantity-handler down">-</span>
-              <span class="item-quantity">2</span>
-              <span class="quantity-handler up">+</span>
-            </div>
-          </div>
-          <!--  -->
-          <span class="divider"></span>
-          <div class="cart--buy-section">
-            <div class="cart-total">
-              <span>ARS$690.000</span>
-            </div>
-            <button class="buy--btn">Pagar</button>
-            <!-- Divisor -->
           </div>
         </div>
-      </div>
+        <div class="overlay"></div>
+      </nav>
     </header>
     <main>
       <section id="hero">
@@ -132,10 +119,7 @@
           <div class="trend-product--tittle">
             <h1>Productos destacados</h1>
           </div>
-          <div class="trend-product--move">
-            <button class="trend-product--move-btns"><-</button>
-            <button class="trend-product--move-btns">-></button>
-          </div>
+
           <div class="trend-product--buy">
             <div class="buy--image">
               <img src="assets/img/hero/notebook.png" alt="notebook" />
