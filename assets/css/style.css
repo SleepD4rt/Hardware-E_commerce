@@ -282,19 +282,18 @@ main {
   align-items: center;
   justify-content: space-around;
 }
-
 .buy--image {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 5px;
 }
-
 .buy--image img {
-  width: 600px;
+  width: 40%;
 }
 
-.buy--btn {
+.btn--buy {
   justify-content: center;
   align-items: center;
   width: 50%;

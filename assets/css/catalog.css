@@ -98,12 +98,11 @@
   padding: 10px;
 }
 
-.buy--btn {
-  width: auto;
-  height: 60px;
+.btn--buy {
+  width: 60px;
+  height: 50px;
   background-color: black;
   color: white;
-  padding: 5px;
   border-radius: 0.8rem;
   -webkit-border-radius: 0.8rem;
   -moz-border-radius: 0.8rem;
@@ -112,12 +111,10 @@
   cursor: pointer;
 }
 
-.buy--btn-img {
-  padding: 5px;
+.buy--image {
   height: 40px;
   width: 40px;
 }
-
 .buy--price {
   position: relative;
   width: 100%;

@@ -1,6 +1,7 @@
 // Contenedor de productos
 const productsContainer = document.querySelector(".products-container");
-
+// Boton ver mas
+const showMoreBtn = document.querySelector(".btn-load");
 // Contenedor Categorias
 const categoriesContainer = document.querySelector(".categories");
 // El HTML Collection de todas las categorias
@@ -16,18 +17,24 @@ const barsMenu = document.querySelector(".navbar--list");
 // Overlay
 const overlay = document.querySelector(".overlay");
 // Cart bubble
-const cartBubble = document.querySelector(".cart-bubble");
+const cartBubble = document.querySelector(".cart--bubble");
 // Total del carrito
 const total = document.querySelector(".total");
 // Boton de comprar
-const buyBtn = document.querySelector(".btn-buy");
+const buyBtn = document.querySelector(".btn--buy");
 // Boton para borrar
-const deleteBtn = document.querySelector(".btn-delete");
+const deleteBtn = document.querySelector(".btn--delete");
 // Cart container
 const productsCart = document.querySelector(".cart-container");
-
+// Modal de success
+const successModal = document.querySelector(".add-modal");
 // Seteamos el carrito
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Funcion para guardar en el LS
+const saveCart = () => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
 
 /* --------- Logica reder products ---------- */
 // Funcion para crear el html del producto
@@ -44,10 +51,10 @@ const createProductTemplate = (product) => {
 
     <h3 class="discovery--product--name">${category} ${name}</h3>
     <div class="discovery--product--buy">
-      <button class="buy--btn" data-id='${id}'
+      <button class="btn--buy" data-id='${id}'
                data-name='${name}'
               data-bid='${bid}'
-              data-img='${cardImg}'><img class="buy--btn-img" src="assets/img/products/add-cart.svg" alt="Agregar al carrito"/></button>
+              data-img='${cardImg}'>Comprar</button>
       <p class="buy--price">${toARG_Peso(bid)}</p>
     </div>
   </div>
@@ -178,29 +185,68 @@ const closeOnScroll = () => {
 /* --------- --------------- ---------- */
 /* --------- Logica carrito  ---------- */
 /* --------- --------------- ---------- */
+
+// Funcion para crear el template del producto en el carrito
+const createCartProductTemplate = (cartProduct) => {
+  const { bid, id, img, name, quantity } = cartProduct;
+
+  return `
+  <div class="cart-item">
+              <img src="${img}" alt="${name}" />
+              <div class="item-info">
+                <h3 class="item-title">${name}</h3>
+                <p class="item-bid">Cantidad</p>
+                <span class="item-price">${toARG_Peso(bid)}</span>
+              </div>
+              <div class="item-handler">
+              <span class="quantity-handler down" data-id=${id}>-</span>
+              <span class="item-quantity">${quantity}</span>
+              <span class="quantity-handler up" data-id=${id}>+</span>
+              </div>
+              </div>
+  `;
+};
+
 // Render carrito
 const renderCart = () => {
   if (!cart.length) {
     productsCart.innerHTML = `<p class="empty-msg">Agrega un producto raton</p>`;
     return;
   }
+  productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
+};
 
-  alert("tuki");
+// Funcion para obtener el total de la compra
+const getCartTotal = () => {
+  return cart.reduce((acc, cur) => acc + Number(cur.bid) * cur.quantity, 0);
+};
+
+// Funcion para mostrar el total del carrito
+const showCartTotal = () => {
+  total.innerHTML = `${toARG_Peso(getCartTotal())}`;
+};
+
+// Funcion para actualizar la burbuja con la cantidad de productos en el cart
+const renderCartBubble = () => {
+  cartBubble.textContent = cart.reduce((acc, cur) => acc + cur.quantity, 0);
 };
 
 const addProduct = (e) => {
-  if (!e.target.classList.contains("btn-add")) return;
+  if (!e.target.classList.contains("btn--buy")) return;
+
   const product = e.target.dataset;
+  console.log(product);
 
   // Tendriamos que hacer un if para verificar que el producto a agregar no este en el carrito
   if (isExistingCartProduct(product)) {
     addUnitToProduct(product);
+    showSuccessModal("Se agrego una unidad del producto");
   } else {
     createCartProduct(product);
+    showSuccessModal("Producto añadido");
   }
 
-  renderCart();
-  console.log(cart);
+  updateCartState();
 };
 
 // Funcion para agregar una unidad al producto
@@ -210,6 +256,24 @@ const addUnitToProduct = (product) => {
       ? { ...cartProduct, quantity: cartProduct.quantity + 1 }
       : cartProduct
   );
+};
+
+const disableBtn = (btn) => {
+  if (!cart.length) {
+    btn.classList.add("disabled");
+  } else {
+    btn.classList.remove("disabled");
+  }
+};
+
+// Funcion para ejecutar funciones necesarias para actualizar el estado carro
+const updateCartState = () => {
+  saveCart();
+  renderCart();
+  showCartTotal();
+  disableBtn(buyBtn);
+  disableBtn(deleteBtn);
+  renderCartBubble();
 };
 
 // Funcion para saber si un producto ya existe en el carrito
@@ -222,17 +286,102 @@ const createCartProduct = (product) => {
   cart = [...cart, { ...product, quantity: 1 }];
 };
 
+// Funcion para mostrar el modal
+const showSuccessModal = (msg) => {
+  successModal.classList.add("active-modal");
+  successModal.textContent = msg;
+
+  setTimeout(() => {
+    successModal.classList.remove("active-modal");
+  }, 1500);
+};
+
+// Funcion para manejar el evento click de + en el producto carrito
+const handlePlusBtnEvent = (id) => {
+  const existingCartProduct = cart.find((item) => item.id === id);
+  addUnitToProduct(existingCartProduct);
+};
+
+// Funcion para manejar el evento click del - en el producto carrito
+const handleMinusBtnEvent = (id) => {
+  const existingCartProduct = cart.find((item) => item.id === id);
+
+  if (existingCartProduct.quantity === 1) {
+    if (window.confirm("Deseas eliminar el producto?")) {
+      removeProductFromCart(existingCartProduct);
+    }
+    return;
+  }
+
+  substractProductUnit(existingCartProduct);
+};
+
+const substractProductUnit = (existingCartProduct) => {
+  cart = cart.map((product) => {
+    return product.id === existingCartProduct.id
+      ? { ...product, quantity: Number(product.quantity) - 1 }
+      : product;
+  });
+};
+
+const removeProductFromCart = (existingCartProduct) => {
+  cart = cart.filter((product) => product.id !== existingCartProduct.id);
+  updateCartState();
+};
+
+// Funcion para manejar la cantidad de los productos en el carro
+const handleQuantity = (e) => {
+  if (e.target.classList.contains("up")) {
+    handlePlusBtnEvent(e.target.dataset.id);
+  } else if (e.target.classList.contains("down")) {
+    handleMinusBtnEvent(e.target.dataset.id);
+  }
+
+  // para todos los casos
+  updateCartState();
+};
+
+const resetCartItems = () => {
+  cart = [];
+  updateCartState();
+};
+
+const completeCartAction = (confirmMsg, successMsg) => {
+  if (!cart.length) return;
+  if (window.confirm(confirmMsg)) {
+    resetCartItems();
+    alert(successMsg);
+  }
+};
+
+const completeBuy = () => {
+  completeCartAction("Deseas completar tu compra?", "Gracias por tu compra!");
+};
+
+const deleteCart = () => {
+  completeCartAction("Deseas borrar el carro?", "No hay productos en el carro");
+};
 // Funcion init
 const init = () => {
   renderProducts(appState.products[0]);
   categoriesContainer.addEventListener("click", applyFilter);
+
   cartBtn.addEventListener("click", toggleCart);
   menuBtn.addEventListener("click", toggleMenu);
   overlay.addEventListener("click", closeOnOverlayClick);
   window.addEventListener("scroll", closeOnScroll);
 
   productsContainer.addEventListener("click", addProduct);
-  // document.addEventListener("DOMContentLoaded", renderCart);
+  document.addEventListener("DOMContentLoaded", renderCart);
+
+  productsCart.addEventListener("click", handleQuantity);
+  document.addEventListener("DOMContentLoaded", renderCart);
+
+  buyBtn.addEventListener("click", completeBuy);
+  deleteBtn.addEventListener("click", deleteCart);
+  disableBtn(buyBtn);
+  disableBtn(deleteBtn);
+  renderCartBubble(cart);
 };
 
 init();
