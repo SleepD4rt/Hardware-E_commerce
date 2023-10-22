@@ -46,6 +46,12 @@
     display: flex;
   }
 
+  .cart--bubble {
+    position: absolute;
+    top: 32px;
+    right: 90px;
+  }
+
   .contact--info {
     flex-direction: column;
     gap: 10px;
