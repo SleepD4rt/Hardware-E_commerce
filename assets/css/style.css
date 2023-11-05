@@ -109,6 +109,7 @@ header img {
   position: absolute;
   padding: 50px 30px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   right: 0;
   background: #1c1c1c;
@@ -117,7 +118,7 @@ header img {
   height: calc(100vh - 100px);
   overflow-y: scroll;
   z-index: 2;
-  gap: 30px;
+  gap: 20px;
   overflow-y: scroll;
   min-width: 400px;
   transform: translate(200%);
@@ -166,17 +167,20 @@ header img {
 .cart-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .cart-item img {
   width: 60px;
+  height: 60px;
 }
 
 .cart-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #efefef;
+  justify-content: space-between;
   width: 100%;
   padding: 5px;
   border-radius: 0.3rem;
@@ -184,13 +188,22 @@ header img {
   -moz-border-radius: 0.3rem;
   -ms-border-radius: 0.3rem;
   -o-border-radius: 0.3rem;
-  gap: 15px;
 }
 
 .item-info {
   padding-left: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.item-handler_Divisor {
+  left: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 2px;
 }
 
 .item-handler {
@@ -393,4 +406,27 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.add-modal {
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  transform: translateY(200%);
+}
+
+.active-modal {
+  transform: translateY(0);
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
 }

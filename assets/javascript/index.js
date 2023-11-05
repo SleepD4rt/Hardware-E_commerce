@@ -195,13 +195,16 @@ const createCartProductTemplate = (cartProduct) => {
               <img src="${img}" alt="${name}" />
               <div class="item-info">
                 <h3 class="item-title">${name}</h3>
-                <p class="item-bid">Cantidad</p>
+
                 <span class="item-price">${toARG_Peso(bid)}</span>
               </div>
+              <div class="item-handler_Divisor">
+              <p class="item-bid">Cantidad</p>
               <div class="item-handler">
               <span class="quantity-handler down" data-id=${id}>-</span>
               <span class="item-quantity">${quantity}</span>
               <span class="quantity-handler up" data-id=${id}>+</span>
+              </div>
               </div>
               </div>
   `;
@@ -210,7 +213,7 @@ const createCartProductTemplate = (cartProduct) => {
 // Render carrito
 const renderCart = () => {
   if (!cart.length) {
-    productsCart.innerHTML = `<p class="empty-msg">Agrega un producto raton</p>`;
+    productsCart.innerHTML = `<p class="empty-msg">Carrito Vacio</p>`;
     return;
   }
   productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
