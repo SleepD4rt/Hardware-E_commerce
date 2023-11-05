@@ -408,6 +408,11 @@ main {
   align-items: center;
 }
 
+#form__error p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .add-modal {
   padding: 15px 0px;
   display: flex;

@@ -30,6 +30,14 @@ const productsCart = document.querySelector(".cart-container");
 const successModal = document.querySelector(".add-modal");
 // Seteamos el carrito
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//Email Input
+const emailInput = document.getElementById("contact-email");
+//MSJ input
+const msjnput = document.getElementById("contact-msj");
+// form contacto
+const formcontact = document.querySelector("#contact-form");
+//mensaje de error en form de contacto
+const error = document.querySelector("#form__error");
 
 // Funcion para guardar en el LS
 const saveCart = () => {
@@ -364,6 +372,78 @@ const completeBuy = () => {
 const deleteCart = () => {
   completeCartAction("Deseas borrar el carro?", "No hay productos en el carro");
 };
+
+const isEmpty = (input) => {
+  return !input.value.trim().length;
+};
+
+const checkMsj = (input) => {
+  // aca va el codigo a checkear
+  let valid = false;
+  const MIN_CHARACTERS = 10;
+  const MAX_CHARACTERS = 125;
+
+  if (isEmpty(input)) {
+    showError(input, "Este campo es obligatorio");
+    return;
+  }
+
+  const isBetween = (input, min, max) => {
+    return input.value.length >= min && input.value.length <= max;
+  };
+
+  if (!isBetween(input, MIN_CHARACTERS, MAX_CHARACTERS)) {
+    showError(
+      input,
+      `Este campo debe tener entre ${MIN_CHARACTERS} y ${MAX_CHARACTERS} caracteres`
+    );
+    return;
+  }
+
+  valid = true;
+  return valid;
+};
+
+const showError = (e) => {
+  error.innerHTML = `<p>${e}</p>`;
+};
+
+// Regex para validar el email
+const isEmailValid = (input) => {
+  const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+  // Testear
+  return re.test(input.value.trim());
+};
+
+// Funcion para validar el email
+const checkEmail = (input) => {
+  let valid = false;
+  if (isEmpty(input)) {
+    showError("El email es obligario");
+    return;
+  }
+  if (!isEmailValid(input)) {
+    showError("El email no es valido");
+    return;
+  }
+
+  valid = true;
+  return valid;
+};
+
+const validateContactForm = (e) => {
+  e.preventDefault();
+  let isEmailValid = checkEmail(emailInput);
+  let isMsjValid = checkMsj(msjnput);
+
+  let isValidForm = isEmailValid && isMsjValid;
+  if (isValidForm) {
+    showSuccessModal("Mensaje enviado!");
+    setInterval((msjnput.value = ""), 200);
+    setInterval((emailInput.value = ""), 200);
+  }
+};
+
 // Funcion init
 const init = () => {
   renderProducts(appState.products[0]);
@@ -385,6 +465,9 @@ const init = () => {
   disableBtn(buyBtn);
   disableBtn(deleteBtn);
   renderCartBubble(cart);
+
+  //Formulario de Contacto
+  formcontact.addEventListener("submit", validateContactForm);
 };
 
 init();
