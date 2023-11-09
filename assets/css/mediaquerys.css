@@ -63,13 +63,13 @@
     flex-direction: column;
   }
 
-  .buy--image img {
-    width: 400px;
-  }
-
   .header--buscador {
     width: 350px;
   }
+}
+
+@media (max-width: 719px) {
+  
 }
 
 @media (max-width: 550px) {
@@ -83,21 +83,13 @@
     display: none;
   }
 
-  .catalog-product-container {
+  .portada-container {
     display: block;
   }
-
-  .buy--image img {
-    width: 300px;
-  }
-
-  
 }
 
-
-
-/* @media (max-width: 576px) {
-  .header--buscador {
-    display: none;
+@media (max-width: 576px) {
+  .hero--title {
+    width: 95%;
   }
-} */
+}

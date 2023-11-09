@@ -273,44 +273,50 @@ main {
 
 #hero {
   display: flex;
-  background: rgb(155, 160, 91);
-  background: linear-gradient(
-    35deg,
-    rgba(155, 160, 91, 1) 20%,
-    rgba(187, 190, 46, 1) 37%,
-    rgba(243, 247, 0, 1) 58%,
-    rgba(123, 125, 38, 1) 76%
-  );
   width: 80%;
-  height: 500px;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
 
-.trend-product {
-  width: 400px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+#hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: blur(2.5px);
+  -webkit-filter: blur(2.5px);
 }
-.buy--image {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5px;
-}
-.buy--image img {
-  width: 40%;
+.portada-img {
+  border: solid 0.3px black;
 }
 
-.btn--buy {
+.portada-container {
+  top: 125px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: crimson;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  display: flex;
+}
+
+.hero--title {
+  width: 80%;
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+  color: rgba(184, 33, 56, 0.986);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.411);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
 /* ============================ INFO ============================ */

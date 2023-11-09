@@ -1,5 +1,6 @@
-#login {
+#contact-form {
   display: flex;
+  flex-direction: column;
   background: #1c1c1c;
   width: 100%;
   height: 500px;
@@ -8,19 +9,19 @@
   color: white;
 }
 
-#login > .login--container {
+#contact-form > .container-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
-  width: 400px;
+  width: auto;
   border: solid gray 1px;
 }
 
-.formulario-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  text-decoration: underline;
+#form--msj {
+  padding: 10px;
+  width: auto;
 }
 
 .redirect:link {
@@ -57,3 +58,5 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+

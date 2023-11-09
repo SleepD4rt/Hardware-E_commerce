@@ -35,7 +35,7 @@ const emailInput = document.getElementById("contact-email");
 //MSJ input
 const msjnput = document.getElementById("contact-msj");
 // form contacto
-const formcontact = document.querySelector("#contact-form");
+const formcontact = document.querySelector("#form--msj");
 //mensaje de error en form de contacto
 const error = document.querySelector("#form__error");
 

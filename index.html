@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/catalog.css" />
     <link rel="stylesheet" href="assets/css/animaciones.css" />
     <link rel="stylesheet" href="assets/css/mediaquerys.css" />
-
+    <link rel="stylesheet" href="assets/css/contact-form.css" />
     <title>Pixel - Hogar y computación</title>
   </head>
   <body>
@@ -124,19 +124,13 @@
     </header>
     <main>
       <section id="hero">
-        <div class="trend-product">
-          <div class="trend-product--tittle">
-            <h1>Productos destacados</h1>
+        <div class="hero--portada">
+          <div class="portada-container">
+            <h1 class="hero--title">
+              Te asesoramos en la venta de partes y equipos informatícos
+            </h1>
           </div>
-
-          <div class="trend-product--buy">
-            <div class="buy--image">
-              <img src="assets/img/hero/notebook.png" alt="notebook" />
-              <div class="buy--btn">
-                <label><input type="button" value="Comprar" /></label>
-              </div>
-            </div>
-          </div>
+          <img class="portada-img" src="assets/img/hero/store.jpg" alt="" />
         </div>
       </section>
       <!-- CARDS -->
@@ -254,14 +248,32 @@
         <section id="contact-form">
           <div class="container-contact-form">
             <h1>Envíanos un mensaje.</h1>
-            <form id="contact-form">
-              <section class="data-mail">
+            <form id="form--msj">
+              <section class="data-msj">
                 <label>Correo: </label
-                ><input type="text" id="contact-email" required />
+                ><input
+                  type="text"
+                  id="contact-email"
+                  size="40"
+                  maxlength="40"
+                  required
+                />
                 <small id="form__error"></small>
-                <label>Mensaje: </label>
-                <input type="text" id="contact-msj" size="126" required />
+                <br />
+                <br />
+                <textarea
+                  id="contact-msj"
+                  form="form--msj"
+                  rows="6"
+                  maxlength="99"
+                  placeholder="Escribir mensaje"
+                  cols="100"
+                  required
+                >
+                </textarea>
                 <small id="form__error"></small>
+                <br />
+                <br />
                 <input
                   type="submit"
                   class="contact-button"
