@@ -34,14 +34,14 @@
         ><img src="assets/img/logo.jpg" alt="Pixel" class="header--logo"
       /></a>
 
-      <div class="header--buscador">
+      <!-- <div class="header--buscador">
         <img
           src="assets/img/buscar.png"
           alt="buscar"
           class="buscador--buscar"
         />
         <input class="buscador--input" type="text" placeholder="  Buscar" />
-      </div>
+      </div> -->
 
       <!-- Division header -->
 
@@ -98,8 +98,11 @@
             <div class="cart-total">
               <span class="total"></span>
             </div>
+        
             <button class="btn--buy">Comprar</button>
-            <button class="btn--delete">Vaciar carrito</button>
+            <div class="delete">
+            <button class="btn--delete"><img class="delete-trash" src="assets/img/cart/trash.png">Vaciar carrito</button>
+          </div>
             <!-- Divisor -->
           </div>
         </div>
@@ -247,7 +250,7 @@
                 <br />
                 <br />
                 <textarea
-                placeholder="Escribir mensaje"
+                  placeholder="Escribir mensaje"
                   id="contact-msj"
                   form="form--msj"
                   rows="20"

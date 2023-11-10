@@ -261,6 +261,32 @@ header img {
   -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
+.delete{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--delete{
+    width: 60px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.delete-trash{
+  width: 16px;
+  height: 16px;
+}
+
+
 /* ============================ MAIN ============================*/
 
 main {
@@ -317,7 +343,7 @@ main {
   font-size: 2rem;
   text-align: center;
   z-index: 1;
-  color: rgba(184, 33, 56, 0.986);
+  border: solid 1px red;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.411);
   -webkit-border-radius: 30px;

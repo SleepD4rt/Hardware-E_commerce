@@ -129,11 +129,7 @@ const appState = {
 // Placa Madre
 // Memoria Memoria RAM
 // Almacenamiento
-// Almacenamiento
-// Teclados
-// Mouse
-// Impresoras
-// Notebooks
+
 
 // Funcion para convertir el valor del producto
 //a su denominacion monetaria en Pesos Argentinos.
