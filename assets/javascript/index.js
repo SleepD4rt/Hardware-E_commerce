@@ -204,7 +204,7 @@ const createCartProductTemplate = (cartProduct) => {
               <div class="item-info">
                 <h3 class="item-title">${name}</h3>
 
-                <span class="item-price">${toARG_Peso(bid)}</span>
+                <span class="item-price">${toARG_Peso(parseInt(bid))}</span>
               </div>
               <div class="item-handler_Divisor">
               <p class="item-bid">Cantidad</p>

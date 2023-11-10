@@ -72,6 +72,12 @@
   
 }
 
+@media (max-width: 576px) {
+  .hero--title {
+    width: 95%;
+  }
+}
+
 @media (max-width: 550px) {
   .header--buscador {
     display: none;
@@ -88,8 +94,11 @@
   }
 }
 
-@media (max-width: 576px) {
-  .hero--title {
-    width: 95%;
-  }
+
+@media (max-width: 452px) {
+.cart{
+  min-width: 200px;
+  max-width: 300px;
+}
+
 }
