@@ -69,7 +69,6 @@
 }
 
 @media (max-width: 719px) {
-  
 }
 
 @media (max-width: 576px) {
@@ -94,11 +93,12 @@
   }
 }
 
-
 @media (max-width: 452px) {
-.cart{
-  min-width: 200px;
-  max-width: 300px;
-}
-
+  .cart {
+    min-width: 200px;
+    max-width: 300px;
+  }
+  .hero--title {
+    font-size: 1rem;
+  }
 }

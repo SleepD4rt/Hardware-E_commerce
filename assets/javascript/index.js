@@ -233,8 +233,8 @@ const getCartTotal = () => {
 };
 
 // Funcion para mostrar el total del carrito
-const showCartTotal = () => {
-  total.innerHTML = `${toARG_Peso(getCartTotal())}`;
+const showCartTotal = (bid) => {
+  total.innerHTML = `${toARG_Peso(getCartTotal(bid))}`;
 };
 
 // Funcion para actualizar la burbuja con la cantidad de productos en el cart
@@ -246,7 +246,6 @@ const addProduct = (e) => {
   if (!e.target.classList.contains("btn--buy")) return;
 
   const product = e.target.dataset;
-  console.log(product);
 
   // Tendriamos que hacer un if para verificar que el producto a agregar no este en el carrito
   if (isExistingCartProduct(product)) {
@@ -455,10 +454,9 @@ const init = () => {
   window.addEventListener("scroll", closeOnScroll);
 
   productsContainer.addEventListener("click", addProduct);
-  document.addEventListener("DOMContentLoaded", renderCart);
+  document.addEventListener("DOMContentLoaded", updateCartState);
 
   productsCart.addEventListener("click", handleQuantity);
-  document.addEventListener("DOMContentLoaded", renderCart);
 
   buyBtn.addEventListener("click", completeBuy);
   deleteBtn.addEventListener("click", deleteCart);

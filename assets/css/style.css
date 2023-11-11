@@ -105,7 +105,6 @@ header img {
 /* ============================ CARRITO DE COMPRAS ============================*/
 
 .cart {
-  top: 65px;
   position: absolute;
   padding: 50px 30px;
   display: flex;
@@ -119,7 +118,6 @@ header img {
   overflow-y: scroll;
   z-index: 2;
   gap: 20px;
-  overflow-y: scroll;
   min-width: 400px;
   max-width: 500px;
   transform: translate(200%);
@@ -132,6 +130,12 @@ header img {
   -moz-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -ms-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.cart::-webkit-scrollbar {
+  display: none;
 }
 
 .cart--icon {
@@ -154,7 +158,7 @@ header img {
   background: var(--primary);
   color: var(--text-white);
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   height: 18px;
   width: 18px;
   display: flex;
@@ -176,6 +180,7 @@ header img {
 .cart-item img {
   width: 60px;
   height: 60px;
+  background: white;
 }
 
 .cart-item {
@@ -243,11 +248,6 @@ header img {
   gap: 15px;
 }
 
-.divider {
-  margin-top: 50px;
-  border: 0.5px solid var(--electric);
-}
-
 .open-cart {
   transform: translate(0%);
   transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
@@ -261,31 +261,34 @@ header img {
   -o-transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
-.delete{
+.delete {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.btn--delete{
-    width: 60px;
-    height: 50px;
-    background-color: red;
-    color: white;
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
-    cursor: pointer;
+.btn--delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 60px;
+  background-color: red;
+  color: white;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  cursor: pointer;
 }
 
-.delete-trash{
-  width: 16px;
-  height: 16px;
+.delete-trash {
+  width: 20px;
+  height: 20px;
 }
-
 
 /* ============================ MAIN ============================*/
 
@@ -324,21 +327,22 @@ main {
 }
 
 .portada-container {
-  top: 125px;
-  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: auto;
   height: auto;
   text-align: center;
-  background-color: crimson;
-  justify-content: center;
-  align-items: center;
+  background-color: transparent;
+  align-content: center;
+  padding: 10px;
 }
 
 .hero--title {
-  width: 80%;
   position: absolute;
+  width: 80%;
+  padding: 2px;
   color: white;
   font-size: 2rem;
   text-align: center;
